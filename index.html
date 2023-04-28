@@ -18,6 +18,23 @@
         }
 
         p {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
             color: lightsalmon;
             font-size: 24px;
             font-weight: bold;
@@ -34,6 +51,10 @@
             background-repeat: no-repeat;
         }
 
+        img {
+            display: none;
+        }
+
         @media screen and (max-width: 480px) {
             body {
                 background-image: none;
@@ -42,6 +63,25 @@
             p {
                 font-size: 16px;
             }
+
+            img {
+                display: inline;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+                position: fixed;
+                margin: 0;
+                padding: 0;
+                border: none;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        main {
+            z-index: 999;
         }
 
         main p {
@@ -51,6 +91,9 @@
 </head>
 
 <body>
+    <div>
+        <img src="./m.png">
+    </div>
     <main>
         <!-- 内容部分 -->
         <p>
@@ -140,7 +183,8 @@
         <p>
             最后，如果有打扰到你的生活，实属抱歉。
         </p>
-    </main>>
+    </main>
+
 </body>
 
 </html>
