@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,27 +11,10 @@
     <!-- 引入 Google Fonts 字体 -->
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
-    <!-- 设置样式 -->
-    <style type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <style>
         html {
             font-family: 'ZCOOL KuaiLe', cursive;
-        }
-
-        p {
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         p {
@@ -47,7 +30,7 @@
         body {
             background-image: url('./Cg12.jpg.png');
             background-size: cover;
-            background-position: center;
+            background-position: top 0 left 0;
             background-repeat: no-repeat;
         }
 
@@ -66,9 +49,6 @@
 
             img {
                 display: inline;
-                width: 100%;
-                max-width: 100%;
-                height: auto;
                 display: block;
                 margin: auto;
                 position: fixed;
@@ -77,114 +57,238 @@
                 border: none;
                 top: 0;
                 left: 0;
+                height: 100vh;
+                overflow: hidden;
             }
         }
 
-        main {
+        .container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .page {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #page1 {
+            transform: translateY(0);
+        }
+
+        #page2 {
+            transform: translateY(100%);
+        }
+
+        #page3 {
+            transform: translateY(200%);
+        }
+
+        #page4 {
+            transform: translateY(200%);
+        }
+
+        #page5 {
+            transform: translateY(200%);
+        }
+
+        .container {
             z-index: 999;
         }
 
-        main p {
+        .page p {
             text-align: center;
         }
     </style>
 </head>
 
 <body>
+
     <div>
         <img src="./m.png">
     </div>
-    <main>
-        <!-- 内容部分 -->
-        <p>
-            本来想直接说出来，但思来想去还是决定用独特一点的方式，匆匆买完服务器后便开始了表达。
-        </p>
-        <p>
-            我和她的对话甚至每一次都清晰的记得。
-        </p>
-        <p>
-            我开始关注到她是在刚开学不久，我只发觉她的英语好像很不错，每次关于英语背诵都总是最先背完。
-        </p>
-        <p>
-            真正对她有一种说不出的感觉是在军训时，她对我说了我以前从未听见过的一句话，她说她真想找一个像我这样的二次元男朋友
-        </p>
-        <p>
-            尽管我不认为这是在对我说，但我还是大受震撼，以至于我没有回答一句话，但我觉得她大概率也不是说给我听的
-        </p>
-        <p>
-            说实在的，从那次以后每每我看见她心中都会有一种奇妙的感觉，可我认为，我应该是一个不容易心动的人
-        </p>
-        <p>
-            确实，但我又是如此容易心动，大概是我以前从来没有过与别人交谈过情感方面的话题吧，甚至玩笑也没有。
-        </p>
-        <p>
-            所以我才会不知所措的没有回答，尽管可能不是对我说的。
-        </p>
-        <p>
-            我欣赏温庭筠《新添声杨柳枝词》中“玲珑骰子安红豆，入骨相思知不知”的那种对情人的万般思念
-        </p>
-        <p>
-            也喜欢余光中《写给妻子的信》中“不要问我心里有没有你，我余光中都是你”的那种浪漫和对妻子深切的爱。
-        </p>
-        <p>
-            更向往周杰伦《麦芽糖》中“我牵着你的手经过，种麦芽糖的山坡。”那种纯真的美好。
-        </p>
-        <p>
-            但她似乎就是可有轻松攻略掉我，她问过我有没有看过《黑色四叶草》，我却可笑的回答没有，对喜欢的人甚至不敢说话。
-        </p>
-        <p>
-            与她最愧疚的一次对话，应该是在信息技术课上，那是在剪头发时发生的事故，导致我很难过，可我就坐在她旁边
-        </p>
-        <p>
-            她用湿巾擦拭键盘，然后递给我，让我也擦一下，可我那时刚剪砸头发，甚至不敢正眼看她，于是没有做出回应
-        </p>
-        <p>
-            又是不敢与她说话，即使她给我湿巾可能是当作处理垃圾的方式。湿巾也一直在我旁边，甚至下课了我也没有动一下
-        </p>
-        <p>
-            即便如此，我也理应带走垃圾，可能因为在她旁边过于紧张，一下课我就离开了，留下了湿巾。
-        </p>
-        <p>
-            我甚至没有做到基本的礼节，这是令我最难过的
-        </p>
-        <p>
-            是快要分班的时候，我双手空空遇到了你和朋友一起抱着一箱子书，你似乎提前叫我帮你抱书，我当然很愿意
-        </p>
-        <p>
-            但我还是表现得有一点不情愿，我也不知道为什么...?虽然书确实很重，但我还是没有吭一声搬完了
-        </p>
-        <p>
-            我在过程中时不时看看手机，其实不是真的在玩手机，也没有那么喜欢玩手机，纯纯想给自己找点事
-        </p>
-        <p>
-            不显得那么尴尬，在那天下午，她竟然还给我买了一瓶水，可我却没有及时说出一句谢谢，尽管在后面补上了
-        </p>
-        <p>
-            即便她可能做了一件她认为很普通的事。但就是这次之后，我承认自己是真的喜欢上了那个女孩。
-        </p>
-        <p>
-            喜欢上了她可爱的感觉，喜欢上了她有点酷酷的感觉。就如同周杰伦《浪漫手机》中“原来爱情可以来的这么突然”一样。
-        </p>
-        <p>
-            其实我本没有这么大的勇气告诉你这些，但受到了舍友的太多鼓励，所以很想把这些讲给你听。
-        </p>
-        <p>
-            背景选用的是《love.choice》中我最喜欢的一幅画,是成功通关后男女主拥抱的画面。
-        </p>
-        <p>
-            也许我没有太多的文采，也不足够优秀，但这些都是我真正想说的，可我又会想到，是不是如同周杰伦《最长的电影》中所说
-        </p>
-        <p>
-            "爱是不是不开口才珍贵"也害怕以后在学校遇到她又会尴尬，但我还是想告诉她，即便没有好的回答，我也能欣然接受。
-        </p>
-        <p>
-            现在是周四凌晨2.37分，因为发烧所以在周四提前回来正好可以有时间写下这些。写完后看到窗外，也会感到今晚月色真美。
-        </p>
-        <p>
-            最后，如果有打扰到你的生活，实属抱歉。
-        </p>
-    </main>
 
+    <div class="container">
+        <div class="page" id="page1">
+            <p>
+                本来想直接说出来，但思来想去还是决定用独特一点的方式，匆匆买完服务器后便开始了表达。
+            </p>
+        </div>
+        <div class="page" id="page2">
+            <p>
+                我和她的对话甚至每一次都清晰的记得。
+            </p>
+            <p>
+                我开始关注到她是在刚开学不久，我只发觉她的英语好像很不错，每次关于英语背诵都总是最先背完。
+            </p>
+            <p>
+                真正对她有一种说不出的感觉是在军训时，她对我说了我以前从未听见过的一句话，她说她真想找一个像我这样的二次元男朋友
+            </p>
+            <p>
+                尽管我不认为这是在对我说，但我还是大受震撼，以至于我没有回答一句话，但我觉得她大概率也不是说给我听的
+            </p>
+            <p>
+                说实在的，从那次以后每每我看见她心中都会有一种奇妙的感觉，可我认为，我应该是一个不容易心动的人
+            </p>
+            <p>
+                确实，但我又是如此容易心动，大概是我以前从来没有过与别人交谈过情感方面的话题吧，甚至玩笑也没有。
+            </p>
+            <p>
+                所以我才会不知所措的没有回答，尽管可能不是对我说的。
+            </p>
+        </div>
+        <div class="page" id="page3">
+            <p>
+                我欣赏温庭筠《新添声杨柳枝词》中“玲珑骰子安红豆，入骨相思知不知”的那种对情人的万般思念
+            </p>
+            <p>
+                也喜欢余光中《写给妻子的信》中“不要问我心里有没有你，我余光中都是你”的那种浪漫和对妻子深切的爱。
+            </p>
+            <p>
+                更向往周杰伦《麦芽糖》中“我牵着你的手经过，种麦芽糖的山坡。”那种纯真的美好。
+            </p>
+            <p>
+                但她似乎就是可有轻松攻略掉我，她问过我有没有看过《黑色四叶草》，我却可笑的回答没有，对喜欢的人甚至不敢说话。
+            </p>
+            <p>
+                与她最愧疚的一次对话，应该是在信息技术课上，那是在剪头发时发生的事故，导致我很难过，可我就坐在她旁边
+            </p>
+            <p>
+                她用湿巾擦拭键盘，然后递给我，让我也擦一下，可我那时刚剪砸头发，甚至不敢正眼看她，于是没有做出回应
+            </p>
+            <p>
+                又是不敢与她说话，即使她给我湿巾可能是当作处理垃圾的方式。湿巾也一直在我旁边，甚至下课了我也没有动一下
+            </p>
+            <p>
+                即便如此，我也理应带走垃圾，可能因为在她旁边过于紧张，一下课我就离开了，留下了湿巾。
+            </p>
+            <p>
+                我甚至没有做到基本的礼节，这是令我最难过的
+            </p>
+        </div>
+        <div class="page" id="page4">
+            <p>
+                是快要分班的时候，我双手空空遇到了你和朋友一起抱着一箱子书，你似乎提前叫我帮你抱书，我当然很愿意
+            </p>
+            <p>
+                但我还是表现得有一点不情愿，我也不知道为什么...?虽然书确实很重，但我还是没有吭一声搬完了
+            </p>
+            <p>
+                我在过程中时不时看看手机，其实不是真的在玩手机，也没有那么喜欢玩手机，纯纯想给自己找点事
+            </p>
+            <p>
+                不显得那么尴尬，在那天下午，她竟然还给我买了一瓶水，可我却没有及时说出一句谢谢，尽管在后面补上了
+            </p>
+            <p>
+                即便她可能做了一件她认为很普通的事。但就是这次之后，我承认自己是真的喜欢上了那个女孩。
+            </p>
+            <p>
+                喜欢上了她可爱的感觉，喜欢上了她有点酷酷的感觉。就如同周杰伦《浪漫手机》中“原来爱情可以来的这么突然”一样。
+            </p>
+            <p>
+                其实我本没有这么大的勇气告诉你这些，但受到了舍友的太多鼓励，所以很想把这些讲给你听。
+            </p>
+        </div>
+        <div class="page" id="page5">
+            <p>
+                背景选用的是《love.choice》中我最喜欢的一幅画,是成功通关后男女主拥抱的画面。
+            </p>
+            <p>
+                也许我没有太多的文采，也不足够优秀，但这些都是我真正想说的，可我又会想到，是不是如同周杰伦《最长的电影》中所说
+            </p>
+            <p>
+                "爱是不是不开口才珍贵"也害怕以后在学校遇到她又会尴尬，但我还是想告诉她，即便没有好的回答，我也能欣然接受。
+            </p>
+            <p>
+                现在是周四凌晨2.37分，因为发烧所以在周四提前回来正好可以有时间写下这些。写完后看到窗外，也会感到今晚月色真美。
+            </p>
+            <p>
+                最后，如果有打扰到你的生活，实属抱歉。
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var currentPage = 1;
+        var totalPages = 5;
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                document.querySelector("#page" + currentPage).style.transform = "translateY(0)";
+                document.querySelector("#page" + (currentPage - 1)).style.transform = "translateY(-100%)";
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                document.querySelector("#page" + currentPage).style.transform = "translateY(0)";
+                document.querySelector("#page" + (currentPage + 1)).style.transform = "translateY(100%)";
+            }
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.keyCode === 40) { // 下键
+                nextPage();
+            } else if (event.keyCode === 38) { // 上键
+                prevPage();
+            }
+        });
+
+        document.addEventListener("wheel", function (event) {
+            if (event.deltaY > 0) { // 向下滚动
+                nextPage();
+            } else if (event.deltaY < 0) { // 向上滚动
+                prevPage();
+            }
+        });
+        //移动端翻页
+        document.addEventListener("touchstart", handleTouchStart, false);
+        document.addEventListener("touchmove", handleTouchMove, false);
+
+        var xDown = null;
+        var yDown = null;
+
+        function handleTouchStart(event) {
+            xDown = event.touches[0].clientX;
+            yDown = event.touches[0].clientY;
+        }
+
+        function handleTouchMove(event) {
+            if (!xDown || !yDown) {
+                return;
+            }
+
+            var xUp = event.touches[0].clientX;
+            var yUp = event.touches[0].clientY;
+
+            var xDiff = xDown - xUp;
+            var yDiff = yDown - yUp;
+
+            if (Math.abs(xDiff) > Math.abs(yDiff)) {
+                // 水平滑动
+                return;
+            }
+
+            if (yDiff > 0) {
+                // 向上滑动
+                nextPage();
+            } else {
+                // 向下滑动
+                prevPage();
+            }
+
+            xDown = null;
+            yDown = null;
+        }
+    </script>
 </body>
 
 </html>
