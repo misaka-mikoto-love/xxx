@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>生日快乐</title>
+    <link rel="shortcut icon" href="./a5ea-e42656796a0c0d39d36d11406efcb750.jpg" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入 Google Fonts 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
+    <!-- 设置样式 -->
+    <style type="text/css">
+        html {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-in-out;
+        }
+
+        #TopImg {
+            text-align: center;
+        }
+
+        #TopImg img {
+            width: 50%;
+            height: auto
+        }
+
+        @media screen and (max-width:500px) {
+            #TopImg img {
+                width: 100%;
+            }
+
+            p {
+                font-size: larger;
+            }
+        }
+
+        @media screen and (min-width:500px) {
+            #TopImg img {
+                width: 50%;
+            }
+
+            p {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var ps = document.querySelectorAll('p');
+            for (let i = 0; i < ps.length; i++) {
+                ps[i].style.opacity = 1;
+                ps[i].style.transform = 'translateY(0)';
+            }
+
+            document.getElementById("loading").style.opacity = '0';
+            document.getElementById("loading").style.visibility = 'hidden';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 加载动画 -->
+    <div id="loading"
+        style="width:100%;height:100%;position:fixed;background:#fff;z-index:9990;top:0px;left:0px;transition: all 1s linear;opacity: 1;">
+        <div class="ld-content" style="position: absolute;top:50%;left: 50%;margin-left: -240px;margin-top: -120px;">
+            <img src="./image/loading.gif" alt="" height="240px" width="480px">
+        </div>
+    </div>
+
+    <!-- 页面内容 -->
+    <div id="TopImg"><img src="./04224953_ab4515f139_small.png"></div>
+    <div style="text-align: center;">
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+        <p id="time">已经遇见你<span></span></p>
+
+        <!-- 计时器 -->
+        <script type="text/javascript">
+            /**
+             * 将数字转换为两位数的字符串
+             * @param {number} num - 要转换的数字
+             * @returns {string} - 转换后的字符串
+             */
+            function toDouble(num) {
+                return num >= 10 ? num.toString() : '0' + num;
+            }
+
+            /**
+             * 计时器函数
+             * @param {number} year - 目标日期的年份
+             * @param {number} month - 目标日期的月份
+             * @param {number} day - 目标日期的日期
+             * @param {number} hour - 目标日期的小时数
+             * @param {number} minute - 目标日期的分钟数
+             * @param {number} seconds - 目标日期的秒数
+             * @param {HTMLElement} elem - 显示倒计时的元素
+             */
+            function timer(year, month, day, hour, minute, seconds, elem) {
+                const endTime = new Date(year, month - 1, day, hour, minute, seconds);
+
+                setTime();
+                setInterval(setTime, 1000);
+
+                function setTime() {
+                    const startTime = new Date();
+                    const lengthTime = Math.floor((startTime - endTime) / 1000);
+                    const lSeconds = lengthTime % 60;
+                    const lMinute = Math.floor(lengthTime / 60) % 60;
+                    const lHour = Math.floor(lengthTime / 3600) % 24;
+                    const lDay = Math.floor(lengthTime / (24 * 3600));
+                    elem.innerHTML = `${lDay}天${toDouble(lHour)}小时${toDouble(lMinute)}分钟${toDouble(lSeconds)}秒`;
+                }
+            }
+
+            const main = document.getElementById("time");
+            const span = main.getElementsByTagName("span")[0];
+            timer(2018, 9, 1, 0, 0, 0, span);
+        </script>
+    </div>
+</body>
+
+</html>
